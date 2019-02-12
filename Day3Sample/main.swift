@@ -88,4 +88,33 @@ func div(of a:Float, and b:Float)
 }
 div(of:100.5, and: 20.0)
 
+////////////////////
+
+
+//return reverse of given integer
+
+func reverse(n:Int)->Int
+{
+    
+    var  rev=0
+    var s=n
+    
+    while(s>0)
+    {
+    
+    rev = rev * 10 + s % 10;
+    s = s/10;
+    
+    }
+    
+    return(rev)
+}
+print("reverse is,",reverse(n: 1234))
+
+
+
+
+
+
+
 
