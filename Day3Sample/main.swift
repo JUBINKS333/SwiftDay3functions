@@ -108,8 +108,42 @@ func reverse(n:Int)->Int
     }
     
     return(rev)
+    
 }
-print("reverse is,",reverse(n: 1234))
+print("reverse is,",reverse(n: 6981))
+
+
+func display(n : Int)->Int
+{
+    
+    
+    if n==0
+    {
+        return 0
+    }
+    print(n)
+    return display(n: n - 1)
+    
+}
+display(n: 8)
+
+func bToD(n: Int) -> Int {
+    var num = n
+    var dec = 0
+    var base = 1
+    while num > 0 {
+        var last_digit = num % 10
+        num = num / 10
+        
+        dec = dec + last_digit * base
+        base = base * 2
+    }
+    return dec
+}
+
+
+print(bToD(n: 1010))
+
 
 
 
